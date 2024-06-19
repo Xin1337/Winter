@@ -1,38 +1,76 @@
 function startQuestions() {
-    document.getElementById("questions").style.display = "block";
-  }
-  
-  function answerYes() {
-    document.getElementById("questions").style.display = "none";
-      document.getElementById("que").style.display = "none";
-      document.getElementById("init").innerText = "YEY YEY 🎉🎉🎉";
-    document.getElementById("message").style.display = "block";
-    document.getElementById("messageText").innerText = "I believe in love at first sight too! How about we go on a date and see if it's true?";
-    showConfetti()
+  document.getElementById("questions").style.display = "block";
 }
-  
-  function answerNo() {
-    document.getElementById("questions").style.display = "none";
-    document.getElementById("que").style.display = "none";
-    document.getElementById("init").innerText = "YEY YEY 🎉🎉🎉";
-    document.getElementById("message").style.display = "block";
-    document.getElementById("messageText").innerText = "No worries, love takes time. But can we spend some time together and see if something beautiful blossoms?";
-    showConfetti()
 
+var yesMessages = [
+  "I believe in love at first sight too! How about we go on a date and see if it's true?",
+  "That's amazing! We should go out and see if we're meant to be together.",
+  "Awesome! We should go on a date and see if we're meant to be together.",
+];
+
+var noMessages = [
+  "No worries, love takes time. But can we spend some time together and see if something beautiful blossoms?",
+  "That's okay! How about we go on a date and see if we can change your mind.",
+  "No problem! Let's go on an adventure together and see if we can find love.",
+];
+
+function answerYes() {
+  document.getElementById("questions").style.display = "none";
+  document.getElementById("que").style.display = "none";
+  document.getElementById("init").innerText = "⋆꙳❅*❆";
+  document.getElementById("message").style.display = "block";
+  var randomYesMessage =
+    yesMessages[Math.floor(Math.random() * yesMessages.length)];
+  document.getElementById("messageText").innerText = randomYesMessage;
 }
-  
-// Function to show confetti
-function showConfetti() {
-    const confettiSettings = {
-      target: 'confetti-canvas',
-      respawn: true,
-      colors: ['#ff0000', '#00ff00', '#0000ff'], 
-    };
-  
-    const confetti = new ConfettiGenerator(confettiSettings);
-    confetti.render();
-    setTimeout(() => {
-      confetti.clear();
-    }, 5000);
-  }
-  
+
+function answerNo() {
+  document.getElementById("questions").style.display = "none";
+  document.getElementById("que").style.display = "none";
+  document.getElementById("init").innerText = "⋆꙳❅*❆";
+  document.getElementById("message").style.display = "block";
+  var randomNoMessage =
+    noMessages[Math.floor(Math.random() * noMessages.length)];
+  document.getElementById("messageText").innerText = randomNoMessage;
+}
+
+function showSnowEffect() {
+  tsParticles.load("tsparticles", {
+    particles: {
+      color: { value: "#fff" },
+      move: {
+        direction: "bottom",
+        enable: true,
+        outModes: "out",
+        speed: 2,
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 1501,
+        },
+        value: 400,
+      },
+      opacity: {
+        value: 0.7,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        value: 7.9,
+      },
+      wobble: {
+        enable: true,
+        distance: 10,
+        speed: 10,
+      },
+      zIndex: {
+        value: { min: 0, max: 100 },
+      },
+    },
+  });
+}
+
+// Call the showSnowEffect function when the window loads
+window.onload = showSnowEffect;

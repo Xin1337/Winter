@@ -2,6 +2,8 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     text-align: center;
     padding-top: 100px;
+    background-color: #292727;
+    color: #e0dcdc;
   }
   
   .container {
@@ -25,12 +27,9 @@ body {
     margin-top: 20px;
   }
 
-  #confetti-canvas{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    z-index: -10;
+  canvas {
+    display: block;
+    vertical-align: bottom;
   }
   
   button {
