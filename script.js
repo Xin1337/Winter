@@ -4,14 +4,14 @@ function startQuestions() {
 
 var yesMessages = [
   "I believe in love at first sight too! How about we go on a date and see if it's true?",
-  "That's amazing! We should go out and see if we're meant to be together.",
-  "Awesome! We should go on a date and see if we're meant to be together.",
+  "That's amazing! Can we spend some time together and see if our chemistry is real?",
+  "Awesome! Want to hang out and see if we can make something beautiful together?",
 ];
 
 var noMessages = [
   "No worries, love takes time. But can we spend some time together and see if something beautiful blossoms?",
-  "That's okay! How about we go on a date and see if we can change your mind.",
-  "No problem! Let's go on an adventure together and see if we can find love.",
+  "Well, love is a journey. How about we go on an adventure together and see where it takes us?",
+  "That's okay! Can we spend some time together and see if we can make something beautiful together?",
 ];
 
 function answerYes() {
@@ -58,7 +58,7 @@ function showSnowEffect() {
         type: "circle",
       },
       size: {
-        value: 7.9,
+        value: 4.9,
       },
       wobble: {
         enable: true,
