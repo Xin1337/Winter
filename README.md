@@ -13,7 +13,7 @@ To get started with AskHerOut.js, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/koushith/AskHerOut.git
+   git clone https://github.com/Xin1337/Snow.git
    ```
 
 2. Open the `index.html` file in your favorite web browser.
